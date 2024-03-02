@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"strconv"
+	"strings"
 )
 
 // ValueType the type for JSON element
@@ -297,7 +299,23 @@ func (iter *Iterator) Read() interface{} {
 		if iter.cfg.configBeforeFrozen.UseNumber {
 			return json.Number(iter.readNumberAsString())
 		}
-		return iter.ReadFloat64()
+		// 如果带小数点，返回float64，否则返回int64 而不是一律返回float64
+		val := iter.readNumberAsString()
+		if strings.Contains(val, ".") {
+			f, err := strconv.ParseFloat(val, 64)
+			if err != nil {
+				iter.ReportError("Read", fmt.Sprintf("unexpected number format: %v", val))
+				return nil
+			}
+			return f
+		} else {
+			i, err := strconv.ParseInt(val, 10, 64)
+			if err != nil {
+				iter.ReportError("Read", fmt.Sprintf("unexpected number format: %v", val))
+				return nil
+			}
+			return i
+		}
 	case NilValue:
 		iter.skipFourBytes('n', 'u', 'l', 'l')
 		return nil
