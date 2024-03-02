@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/json-iterator/go"
+	"github.com/samegek/go"
 	"github.com/stretchr/testify/require"
 )
 

@@ -1,10 +1,10 @@
-[![Sourcegraph](https://sourcegraph.com/github.com/json-iterator/go/-/badge.svg)](https://sourcegraph.com/github.com/json-iterator/go?badge)
-[![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://pkg.go.dev/github.com/json-iterator/go)
-[![Build Status](https://travis-ci.org/json-iterator/go.svg?branch=master)](https://travis-ci.org/json-iterator/go)
-[![codecov](https://codecov.io/gh/json-iterator/go/branch/master/graph/badge.svg)](https://codecov.io/gh/json-iterator/go)
-[![rcard](https://goreportcard.com/badge/github.com/json-iterator/go)](https://goreportcard.com/report/github.com/json-iterator/go)
-[![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/json-iterator/go/master/LICENSE)
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/json-iterator/Lobby)
+[![Sourcegraph](https://sourcegraph.com/github.com/samegek/go/-/badge.svg)](https://sourcegraph.com/github.com/samegek/go?badge)
+[![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://pkg.go.dev/github.com/samegek/go)
+[![Build Status](https://travis-ci.org/samegek/go.svg?branch=master)](https://travis-ci.org/samegek/go)
+[![codecov](https://codecov.io/gh/samegek/go/branch/master/graph/badge.svg)](https://codecov.io/gh/samegek/go)
+[![rcard](https://goreportcard.com/badge/github.com/samegek/go)](https://goreportcard.com/report/github.com/samegek/go)
+[![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/samegek/go/master/LICENSE)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/samegek/Lobby)
 
 A high-performance 100% compatible drop-in replacement of "encoding/json"
 
@@ -12,7 +12,7 @@ A high-performance 100% compatible drop-in replacement of "encoding/json"
 
 ![benchmark](http://jsoniter.com/benchmarks/go-benchmark.png)
 
-Source code: https://github.com/json-iterator/go-benchmark/blob/master/src/github.com/json-iterator/go-benchmark/benchmark_medium_payload_test.go
+Source code: https://github.com/samegek/go-benchmark/blob/master/src/github.com/samegek/go-benchmark/benchmark_medium_payload_test.go
 
 Raw Result (easyjson requires static code generation)
 
@@ -42,7 +42,7 @@ json.Marshal(&data)
 with
 
 ```go
-import jsoniter "github.com/json-iterator/go"
+import jsoniter "github.com/samegek/go"
 
 var json = jsoniter.ConfigCompatibleWithStandardLibrary
 json.Marshal(&data)
@@ -58,7 +58,7 @@ json.Unmarshal(input, &data)
 with
 
 ```go
-import jsoniter "github.com/json-iterator/go"
+import jsoniter "github.com/samegek/go"
 
 var json = jsoniter.ConfigCompatibleWithStandardLibrary
 json.Unmarshal(input, &data)
@@ -69,7 +69,7 @@ json.Unmarshal(input, &data)
 # How to get
 
 ```
-go get github.com/json-iterator/go
+go get github.com/samegek/go
 ```
 
 # Contribution Welcomed !
@@ -82,4 +82,4 @@ Contributors
 - [Oleg Shaldybin](https://github.com/olegshaldybin)
 - [Jason Toffaletti](https://github.com/toffaletti)
 
-Report issue or pull request, or email taowen@gmail.com, or [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/json-iterator/Lobby)
+Report issue or pull request, or email taowen@gmail.com, or [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/samegek/Lobby)
